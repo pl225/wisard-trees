@@ -1,0 +1,5 @@
+__pycache__/
+.cache
+.ipython
+.bash_history
+.python_history
