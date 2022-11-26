@@ -8,4 +8,6 @@ RUN pip install networkx
 
 RUN pip install wisardpkg
 
+RUN pip install gensim
+
 CMD [ "sh" ]
