@@ -1,6 +1,6 @@
 import numpy as np
 import wisardpkg as wp
-from codificadores_t2 import filtrar_vazio, preordem_codificador, lista_aresta_codificador
+from codificadores_t2 import filtrar_vazio, preordem_codificador, lista_aresta_codificador, node2vec_codificador
 #from graph_tool.draw import graph_draw
 #from graph_tool import Graph
 
@@ -26,8 +26,10 @@ X_teste, Y_teste = filtrar_vazio(data['X'], data['Y'])
 
 kc_edge_list = wp.KernelCanvas(2, 100, bitsPerKernel=10)
 kc_preorder = wp.KernelCanvas(1, 30, bitsPerKernel=10)
+kc_node2vec = wp.KernelCanvas(20, 100, bitsPerKernel=10)
 
 #print(X_treino[0], Y_treino[0])
 
-executar_testes(X_treino, Y_treino, X_teste, Y_teste, lista_aresta_codificador, kc_edge_list)
 executar_testes(X_treino, Y_treino, X_teste, Y_teste, preordem_codificador, kc_preorder)
+executar_testes(X_treino, Y_treino, X_teste, Y_teste, lista_aresta_codificador, kc_edge_list)
+executar_testes(X_treino, Y_treino, X_teste, Y_teste, node2vec_codificador, kc_node2vec)
