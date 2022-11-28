@@ -3,3 +3,8 @@ __pycache__/
 .ipython
 .bash_history
 .python_history
+pickles
+pickles/*
+.lesshst
+*.log
+*.txt
