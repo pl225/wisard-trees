@@ -8,6 +8,10 @@ RUN pip install networkx
 
 RUN pip install wisardpkg
 
+RUN pip install futures
+
+RUN pip install fastdtw
+
 RUN pip install gensim
 
 CMD [ "sh" ]
