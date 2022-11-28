@@ -1,7 +1,8 @@
 import networkx as nx
 import numpy as np
-from parser_node2vec import main
+from parser_node2vec import main as parse_node2vec
 from args import Args
+from parser_struct2vec import main as parse_struct2vec
 
 def filtrar_vazio(X, Y):
     X_filtrado = []
@@ -26,4 +27,7 @@ def preordem_codificador (X):
     return [preorder(a) for a in X]
 
 def node2vec_codificador (X):
-    return [main(Args(x)) for x in X]
+    return [parse_node2vec(Args(x)) for x in X]
+
+def struct2vec_codificador (X):
+    return [parse_struct2vec(Args(x)) for x in X]
